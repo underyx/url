@@ -36,7 +36,7 @@ wanikani-to-beeminder:
 
 ### Why not just save the file on a server and add it to crontab?
 
-It's easier use the GitHub and Rancher web UIs.
+It's easier to use the GitHub and Rancher web UIs.
 
 With the alternative, I'd need to drop into a terminal, deliver my locally-developed script somehow (copy-pasting into `vim`, ew), mess with a file system, and set up an isolated environment for each script or accept that I can never upgrade my dependencies when adding newer scripts. Then a couple months later I'll realize the script stopped running and I can't find its logs, which will require even more playing with the shell.
 
