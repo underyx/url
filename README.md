@@ -2,7 +2,8 @@
 
 A dead-simple Docker image to run dead-simple scripts without their own image.
 
-Includes Bash, Python 3, and some common Python packages.
+The image just runs your code after downloading it from a URL you specify.
+It includes Bash, Python 3, and some Python packages commonly used in scripts.
 
 ## Usage
 
