@@ -13,4 +13,4 @@ echo
 echo your script
 echo ===========
 
-./script ${@:2}
+exec ./script ${@:2}
