@@ -73,6 +73,7 @@ Even if someone breaks into your GitHub account, since the URL contains the comm
 - Python 3.6.4 and packages:
 
   ```
+  arrow==0.12.1
   lxml==4.2.3
   python-dateutil==2.7.3
   pyyaml==3.13
