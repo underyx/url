@@ -4,3 +4,4 @@ python-dateutil
 pyyaml
 requests
 requests-html
+slackclient
