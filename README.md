@@ -62,6 +62,35 @@ Even if someone breaks into your GitHub account, since the URL contains the comm
 
 ## Changelog
 
+### 3 (2018-10-01)
+
+- Bumped Python from 3.6.4 to 3.6.6
+- Bumped curl from 7.61.0 to 7.61.1
+- Bumped all Python dependencies, the direct dependencies changed are:
+  - `lxml`: 4.2.4 to 4.2.5
+  - `slackclient`: 1.2.1 to 1.3.0
+
+#### Shipped with
+
+- Bash 4.4.19 and utilities:
+
+  ```
+  curl 7.61.1
+  jq 1.6
+  ```
+
+- Python 3.6.6 and packages:
+
+  ```
+  arrow==0.12.1
+  lxml==4.2.5
+  python-dateutil==2.7.3
+  pyyaml==3.13
+  requests-html==0.9.0
+  requests==2.19.1
+  slackclient==1.3.0
+  ```
+
 ### 2 (2018-08-10)
 
 - Got rid of parent shell process (thanks @chauffer)
