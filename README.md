@@ -62,6 +62,34 @@ Even if someone breaks into your GitHub account, since the URL contains the comm
 
 ## Changelog
 
+### 4 (2018-11-09)
+
+- Fixed `requests-html` by adding the required runtime depenedencies of `libxslt` and `libxml2`
+- Bumped all Python dependencies, the direct dependencies changed are:
+  - `python-dateutil`: 2.7.3 to 2.7.5
+  - `requests`: 2.19.1 to 2.20.1
+
+#### Shipped with
+
+- Bash 4.4.19 and utilities:
+
+  ```
+  curl 7.61.1
+  jq 1.6
+  ```
+
+- Python 3.6.6 and packages:
+
+  ```
+  arrow==0.12.1
+  lxml==4.2.5
+  python-dateutil==2.7.5
+  pyyaml==3.13
+  requests-html==0.9.0
+  requests==2.20.1
+  slackclient==1.3.0
+  ```
+
 ### 3 (2018-10-01)
 
 - Bumped Python from 3.6.4 to 3.6.6
