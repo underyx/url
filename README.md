@@ -7,7 +7,7 @@ It includes Bash, Python 3, and some Python packages commonly used in scripts.
 
 ## Usage
 
-1. Write a script and make sure to include a [hashbang](https://en.wikipedia.org/wiki/Shebang_(Unix)) at the top, such as `#!/usr/bin/env python3` or `#!/usr/bin/env bash`.
+1. Write a script and make sure to include a [hashbang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) at the top, such as `#!/usr/bin/env python3` or `#!/usr/bin/env bash`.
 2. Host your code online somewhere, such as on http://gist.github.com/ — [(example)](https://gist.github.com/underyx/fdc9bca4ab39838f239ad6f3a6ce0d8b)
 3. Copy the URL to the raw code — [(example)](https://gist.githubusercontent.com/underyx/fdc9bca4ab39838f239ad6f3a6ce0d8b/raw/2a6d4e2f0e8f7c3e0eb856b98ee640acb1872609/testy)
 4. Run it like so:
@@ -27,9 +27,12 @@ wanikani-to-beeminder:
   environment:
     WANIKANI_TOKEN: <secret>
     BEEMINDER_TOKEN: <secret>
-  command: [https://gist.githubusercontent.com/underyx/d35f5d304d0ef1c72c925169a0043fe8/raw/9a85ccb03d0b34eaac3fb6d8bd683ee89446a568/wk2bm.py]
+  command:
+    [
+      https://gist.githubusercontent.com/underyx/d35f5d304d0ef1c72c925169a0043fe8/raw/9a85ccb03d0b34eaac3fb6d8bd683ee89446a568/wk2bm.py,
+    ]
   labels:
-    io.rancher.container.start_once: 'true'
+    io.rancher.container.start_once: "true"
     cron.schedule: 55 * * * *
 ```
 
@@ -61,6 +64,42 @@ And anyway, delivery over HTTPS should be unhijackable.
 Even if someone breaks into your GitHub account, since the URL contains the commit hash of the Gist, the attackers can't sneakily edit the code whose hash you took.
 
 ## Changelog
+
+### 5 (2019-05-31)
+
+- Bumped all Python dependencies, the direct dependencies changed are:
+  - `arrow`: 0.12.1 to 0.13.2
+  - `lxml`: 4.2.5 to 4.3.3
+  - `python-dateutil`: 2.7.5 to 2.8.0
+  - `pyyaml`: 3.13 to 5.1
+  - `requests`: 2.20.1 to 2.22.0
+  - `requests-html`: 0.9.0 to 0.10.0
+  - `slackclient`: 1.3.0 to 2.0.1
+- Added libffi, which is a dependency of a dependency of the new slackclient
+- Bumped Alpine base image from 3.8 to 3.9
+- Bumped Python from 3.6.6 to 3.6.8
+- Bumped curl from 7.61.1 to 7.64.0
+
+#### Shipped with
+
+- Bash 4.4.19 and utilities:
+
+  ```
+  curl 7.64.0
+  jq 1.6
+  ```
+
+- Python 3.6.8 and packages:
+
+  ```
+  arrow==0.13.2
+  lxml==4.3.3
+  python-dateutil==2.8.0
+  pyyaml==5.1
+  requests==2.22.0
+  requests-html==0.10.0
+  slackclient==2.0.1
+  ```
 
 ### 4 (2018-11-09)
 
