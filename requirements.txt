@@ -7,7 +7,7 @@
 aiodns==2.0.0             # via slackclient
 aiohttp==3.5.4            # via slackclient
 appdirs==1.4.3            # via pyppeteer
-arrow==0.13.2
+arrow==0.13.2             # via -r requirements.in
 async-timeout==3.0.1      # via aiohttp
 attrs==19.1.0             # via aiohttp
 beautifulsoup4==4.7.1     # via bs4
@@ -18,7 +18,7 @@ chardet==3.0.4            # via aiohttp, requests
 cssselect==1.0.3          # via pyquery
 fake-useragent==0.1.11    # via requests-html
 idna==2.8                 # via requests, yarl
-lxml==4.3.3
+lxml==4.6.2               # via -r requirements.in, pyquery
 multidict==4.5.2          # via aiohttp, yarl
 parse==1.12.0             # via requests-html
 pycares==3.0.0            # via aiodns
@@ -26,12 +26,12 @@ pycparser==2.19           # via cffi
 pyee==6.0.0               # via pyppeteer
 pyppeteer==0.0.25         # via requests-html
 pyquery==1.4.0            # via requests-html
-python-dateutil==2.8.0
-pyyaml==5.1
-requests-html==0.10.0
-requests==2.22.0
+python-dateutil==2.8.0    # via -r requirements.in, arrow
+pyyaml==5.1               # via -r requirements.in
+requests-html==0.10.0     # via -r requirements.in
+requests==2.22.0          # via -r requirements.in, requests-html
 six==1.12.0               # via python-dateutil, w3lib
-slackclient==2.0.1
+slackclient==2.0.1        # via -r requirements.in
 soupsieve==1.9.1          # via beautifulsoup4
 tqdm==4.32.1              # via pyppeteer
 urllib3==1.25.3           # via pyppeteer, requests
